@@ -1,6 +1,6 @@
+import argparse
 import os
 import platform
-import sys
 from multiprocessing import cpu_count
 
 from mpi4py import MPI
@@ -12,12 +12,18 @@ def main():
     """
     start the automated molecular animator
     """
+
+    parser = argparse.ArgumentParser(description='molani - automated molecular animator\n'
+                                                 '  https://github.com/theia-dev/molani')
+    parser.add_argument("config", help="json animation config", type=str)
+    args = parser.parse_args()
+
     comm = MPI.COMM_WORLD
     render_nodes = comm.Get_size()
 
     my_rank = MPI.COMM_WORLD.Get_rank()
 
-    config_path = sys.argv[1].strip()
+    config_path = args.config.strip()
     config = prepare.read_config(config_path)
 
     if my_rank == 0:

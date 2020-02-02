@@ -4,7 +4,7 @@ from pathlib import Path
 from setuptools import setup
 
 base_dir = Path(__file__).absolute().parent
-sys.path.insert(0, str(base_dir / 'pyFiber3D'))
+sys.path.insert(0, str(base_dir / 'molani'))
 
 import config  # import proMAD config without triggering the module __init__.py
 
