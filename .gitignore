@@ -1,0 +1,5 @@
+/molani.egg-info/
+/dist/
+/build/
+/.coverage
+/coverage_html_report/

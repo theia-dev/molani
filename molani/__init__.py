@@ -1,0 +1,3 @@
+"""
+automated molecular animator
+"""
