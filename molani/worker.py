@@ -241,7 +241,7 @@ def build_render_script(config, task):
 
         render_scrip_text += command_lib.render.format(
             temp_path=config['work_dir'] / 'render_scene.dat',
-            tachyon=config['tachyon'],
+            tachyon=config['tachyon_path'],
             path=config['frame_raw_name'].format(frame=frame),
             cpu=config['cpu_map'][config['my_rank']])
 

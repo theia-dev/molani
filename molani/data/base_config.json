@@ -23,7 +23,7 @@
   "annotate_background": "black",
   "log_report_frequency": 20,
   "clean_up": false,
-  "tachyon": "/Applications/VMD\\ 1.9.4a38.app/Contents/vmd/tachyon_MACOSXX86_64",
+  "tachyon_path": "tachyon",
   "font": "DejaVu-Sans-Mono",
   "nearclip": 0.01
 }
